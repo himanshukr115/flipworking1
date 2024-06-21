@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment</title>
+</head>
+<body>
+
+<!-- Button to trigger the UPI payment -->
+<button onclick="openUPIPayment()">Pay Now</button>
+
+<script>
+    function openUPIPayment() {
+        // Variables for UPI payment
+        var upiId = "himanshukr1151@axl";  // Replace with your UPI ID
+        var name = "Himanshu Kumar";    // Replace with the payee name
+        var amount = "10";          // Replace with the amount
+        var currency = "INR";       // Replace with the currency
+        var note = "Payment for services"; // Replace with a transaction note
+
+        // Create the UPI URL
+        var upiUrl = `upi://pay?pa=${upiId}&pn=${name}&tn=${note}&am=${amount}&cu=${currency}`;
+
+        // Open the UPI URL
+        window.location.href = upiUrl;
+    }
+</script>
+
+</body>
+</html>
